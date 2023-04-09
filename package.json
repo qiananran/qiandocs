@@ -1,0 +1,50 @@
+{
+  "name": "qiandocs",
+  "version": "1.0.0",
+  "description": "my blog",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiananran/qiandocs"
+  },
+  "keywords": [
+    "react",
+    "vue",
+    "TypeScript",
+    "Next.js"
+  ],
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "@iconify-json/fa6-solid": "^1.1.13",
+    "@iconify-json/ic": "^1.1.13",
+    "@types/node": "^18.15.11",
+    "vitepress": "^1.0.0-alpha.65"
+  },
+  "dependencies": {
+    "@iconify-json/el": "^1.1.4",
+    "@iconify/iconify": "^3.1.0",
+    "@iconify/json": "^2.2.47",
+    "@pzy915/vitepress-plugin-search": "^1.0.4-alpha.19-3",
+    "directory-tree": "^3.5.1",
+    "echarts": "^5.4.2",
+    "iconify": "^1.4.0",
+    "markdown-it-katex": "^2.0.3",
+    "md5": "^2.3.0",
+    "medium-zoom": "^1.0.8",
+    "postcss": "^8.4.21",
+    "postcss-nested": "^6.0.1",
+    "typescript": "^5.0.4",
+    "unocss": "^0.51.2",
+    "unplugin-icons": "^0.16.1",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.1",
+    "vite-plugin-purge-icons": "^0.9.2",
+    "vue": "^3.2.47"
+  }
+}
