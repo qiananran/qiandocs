@@ -130,3 +130,32 @@ sudo gedit /etc/hosts
 
 操作完毕后，终端再次运行安装指令即可正常执行
 
+
+## 如何在 CLion 中编辑 Ros2
+我先把官方的教程贴出来，英语好的同学可以阅读一下。[官方教程](https://www.jetbrains.com/help/clion/ros2-tutorial.html#create-ext-tool)<br>
+
+我在这里总结一下，方便理解<br>
+首先：在终端中构建ROS2项目并生成汇编数据库文件
+
+```sh
+colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+```
+或
+```sh
+colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -G Ninja
+```
+
+注意，CMAKE_EXPORT_COMPILE_COMMANDS选项只有在CMake使用Makefile或Ninja生成器时可用，可以通过-G选项指定。<br>
+
+构建完成后，在build目录下会生成一个compile_commands.json文件。<br>
+
+其次：打开CLion <br>
+
+最后：在CLion中打开ROS2项目<br>
+
++ 在File | Open中选择刚刚生成的compile_commands.json文件并“Open as Project”。
+
++ 然而CLion把build文件夹当成了工程的根目录。所以我们可以点击 `Tools | Compilation Database | Change Project Root`把根目录替换为你的ROS2工作空间文件夹
+
+
